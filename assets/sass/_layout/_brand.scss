@@ -1,0 +1,43 @@
+// Brand area start here ***
+.brand {
+	&-area {
+		overflow: hidden;
+		border-top: 1px solid var(--border);
+		border-bottom: 1px solid var(--border);
+	}
+	&__item {
+		text-align: center;
+		padding: 45px;
+		border-right: 1px solid var(--border);
+		height: 100%;
+		cursor: pointer;
+		@include breakpoint(max-lg) {
+			border-right: 1px solid var(--border);
+			border-bottom: 1px solid var(--border);
+		}
+		&:hover {
+			img {
+				animation: bounceIn 1s forwards;
+			}
+		}
+	}
+}
+// Brand area end here ***
+
+// Brand two area start here ***
+.brand-two {
+	&-area {
+		overflow: hidden;
+		border-bottom: 1px solid var(--border);
+	}
+	&__item {
+		text-align: center;
+		@include breakpoint(max-md) {
+			img {
+				width: 50px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+// Brand two area end here ***

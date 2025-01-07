@@ -1,0 +1,315 @@
+// Choose area start here ***
+.choose {
+	&-area {
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+	&__wrp {
+		max-width: 1070px;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		float: right;
+		margin-top: -160px;
+	}
+	&-right {
+		max-width: 780px;
+		padding-top: 60px;
+		padding-left: 120px;
+	}
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+	&__item {
+		padding: 40px;
+		background-color: var(--black);
+		.icon {
+			transition: 0.7s;
+			display: inline-block;
+		}
+		.title {
+			color: var(--white);
+		}
+		.text {
+			color: var(--white);
+			margin-top: 5px;
+			line-height: 28px;
+		}
+		.arrow-btn {
+			font-size: 40px;
+			color: var(--white);
+			&:hover {
+				transform: rotate(45deg);
+			}
+		}
+		&.light {
+			background-color: var(--sub-bg);
+			.title {
+				color: var(--heading-color);
+			}
+			.text {
+				color: var(--heading-color);
+			}
+			.arrow-btn {
+				color: var(--heading-color);
+			}
+		}
+		&:hover {
+			.icon {
+				transform: rotateY(360deg);
+			}
+		}
+	}
+	&__tab {
+		.nav {
+			border-bottom: 2px solid var(--border);
+			gap: 10px;
+			justify-content: space-between;
+			@include breakpoint(max-sm) {
+				border-bottom: 1px solid var(--border);
+			}
+			.nav-item {
+				.nav-link {
+					font-size: 18px;
+					font-weight: 500;
+					font-family: var(--font-title);
+					padding: 0;
+					padding-bottom: 20px;
+					border: none;
+					color: var(--black);
+					box-shadow: none;
+					&.active {
+						border-bottom: 2px solid var(--black);
+						background-color: transparent;
+						@include breakpoint(max-sm) {
+							border-bottom: 1px solid var(--black);
+						}
+					}
+					@include breakpoint(max-sm) {
+						font-size: 13px;
+						padding-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+// Choose area end here ***
+
+// Choose one area start here ***
+.choose-one {
+	&-area {
+		overflow: hidden;
+		@include breakpoint(max-xxl) {
+			padding-top: 0;
+		}
+	}
+	&__wrp {
+		padding: 0px 120px;
+		padding-bottom: 130px;
+		@include breakpoint(max-xxl) {
+			padding: 60px;
+		}
+		@include breakpoint(max-md) {
+			padding: 60px 15px;
+		}
+		.work-ten__wrp {
+			&::after {
+				display: none;
+			}
+			@include breakpoint(max-md) {
+				gap: 0;
+			}
+		}
+	}
+	&__image {
+		height: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	&__content {
+		.item {
+			display: flex;
+			gap: 50px;
+			width: 90%;
+			@include breakpoint(max-md) {
+				gap: 20px;
+				width: 95%;
+			}
+			@include breakpoint(max-xxs) {
+				gap: 10px;
+				width: 100%;
+				flex-wrap: wrap;
+			}
+			.icon {
+				display: flex;
+				gap: 20px;
+				min-width: 220px;
+				@include breakpoint(max-md) {
+					gap: 10px;
+					min-width: 150px;
+				}
+				@include breakpoint(max-xxs) {
+					align-items: center;
+				}
+			}
+			&:hover {
+				.icon {
+					svg {
+						animation: pxl_zigzag 0.8s forwards;
+					}
+				}
+			}
+			p {
+				line-height: 28px;
+			}
+			ul {
+				li {
+					@include flex;
+					gap: 10px;
+					margin-top: 15px;
+					font-weight: 500;
+					color: var(--black);
+					font-family: var(--font-title);
+				}
+			}
+		}
+		.line {
+			border-top: 2px solid var(--border);
+			margin: 30px 0;
+		}
+	}
+}
+// Choose one area end here ***
+
+// Choose three area start here ***
+.choose-three {
+	&-area {
+		overflow: hidden;
+	}
+	&__wrp {
+		padding: 130px 120px;
+		background-color: var(--sub-bg);
+		@include breakpoint(max-xxl) {
+			padding: 60px 30px;
+		}
+		@include breakpoint(max-md) {
+			padding: 60px 15px;
+		}
+	}
+	&-right {
+		@include justify;
+		gap: 20px;
+		@include breakpoint(max-sm) {
+			flex-wrap: wrap;
+		}
+	}
+	&__image {
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__content {
+		max-width: 380px;
+		width: 100%;
+		ul {
+			margin-top: 30px;
+			li {
+				@include flex;
+				gap: 30px;
+				margin-bottom: 20px;
+			}
+		}
+		@include breakpoint(max-sm) {
+			order: 2;
+			max-width: 100%;
+		}
+	}
+	&__chart {
+		max-width: 370px;
+		width: 100%;
+		padding: 40px;
+		background-color: var(--white);
+		img {
+			width: 100%;
+		}
+		@include breakpoint(max-sm) {
+			order: 1;
+			max-width: 100%;
+		}
+	}
+}
+// Choose three area end here ***
+
+// Choose four area start here ***
+.choose-four {
+	&-area {
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		background-color: var(--black);
+	}
+	&__bg {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		img {
+			width: 100%;
+		}
+	}
+	&__wrp {
+		max-width: 1460px;
+		margin: 0 auto;
+	}
+}
+// Choose four area end here ***
+
+// Choose twelve area start here ***
+.choose-twelve {
+	&-area {
+		overflow: hidden;
+	}
+	&__wrp {
+		padding: 130px 120px;
+		background-color: #f7f8fd;
+		@include breakpoint(max-xxl) {
+			padding: 60px 30px;
+		}
+		@include breakpoint(max-sm) {
+			padding: 60px 15px;
+		}
+	}
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+	&__content {
+		.list {
+			max-width: 620px;
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+			@include breakpoint(max-sm) {
+				flex-wrap: wrap;
+			}
+			ul {
+				li {
+					@include flex;
+					gap: 10px;
+					&:not(.last-child) {
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+// Choose twelve area end here ***

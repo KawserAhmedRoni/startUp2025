@@ -1,0 +1,320 @@
+// About area start here ***
+.about {
+	&-area {
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+	&__wrp {
+		background-color: var(--black);
+	}
+	&__content {
+		ul {
+			margin: 40px 0;
+			li {
+				font-size: 18px;
+				font-weight: 500;
+				font-family: var(--font-title);
+				line-height: 24px;
+				color: var(--white);
+				@include flex;
+				gap: 5px;
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+	&__testimonial {
+		border-left: 1px solid #ffffff1a;
+		border-right: 1px solid #ffffff1a;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 100%;
+		@include breakpoint(max-lg) {
+			border-bottom: 1px solid #ffffff1a;
+			border-top: 1px solid #ffffff1a;
+		}
+		.icon {
+			@include radius(60px, 60px, 60px);
+			background-color: #ffffff4d;
+			backdrop-filter: blur(10px);
+		}
+		p {
+			font-weight: 500;
+			line-height: 30px;
+			font-size: 18px;
+			color: var(--white);
+		}
+		h4 {
+			color: var(--white);
+			position: relative;
+			padding-left: 50px;
+			margin-top: 40px;
+			&::after {
+				position: absolute;
+				top: 20px;
+				left: 0px;
+				width: 32px;
+				height: 2px;
+				background-color: var(--white);
+				content: "";
+			}
+			span {
+				color: var(--paragraph-light);
+				font-weight: 400;
+			}
+		}
+	}
+	&__funfact {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 100%;
+		ul {
+			@include flex;
+			gap: 20px;
+			.icon {
+				@include radius(66px, 66px, 66px);
+				width: 100%;
+				max-width: 66px;
+				background-color: #ffffff4d;
+				backdrop-filter: blur(20px);
+			}
+			li {
+				h3 {
+					font-size: 80px;
+					line-height: 90px;
+					font-weight: 500;
+					color: var(--white);
+					@include breakpoint(max-xl) {
+						font-size: 50px;
+						line-height: 60px;
+					}
+					@include flex;
+					align-items: center;
+					span {
+						color: inherit;
+					}
+					sup {
+						color: var(--white);
+						font-size: 30px;
+						line-height: 34px;
+						font-weight: 600;
+						display: inline-block;
+						margin-left: 6px;
+					}
+				}
+			}
+		}
+		p {
+			color: var(--white);
+			text-transform: uppercase;
+			margin-top: 10px;
+		}
+	}
+	&__item {
+		padding: 80px;
+		@include breakpoint(max-xxl) {
+			padding: 80px 40px;
+		}
+		@include breakpoint(max-xl) {
+			padding: 50px 30px;
+		}
+		&:hover {
+			.icon {
+				svg {
+					animation: pxl_zigzag 0.8s infinite;
+				}
+			}
+		}
+	}
+	&__rectangle {
+		// position: absolute;
+		// bottom: 0;
+		// right: 0;
+		.item {
+			width: 80px;
+			height: 80px;
+			background-color: red;
+			width: 0;
+			&.animated {
+				width: 80px;
+			}
+			// &-dark {
+			// 	width: 80px;
+			// 	height: 80px;
+			// 	background-color: green;
+			// }
+		}
+	}
+}
+// About area end here ***
+
+.rectangle {
+	&__item {
+		@include radius(70px, 70px, 70px);
+		border-radius: 0;
+		background-color: red;
+		width: 0;
+		&.animated {
+			width: 70px;
+		}
+		&-dark {
+			@extend .rectangle__item;
+			background-color: var(--black);
+			width: 0;
+			&.animated {
+				width: 70px;
+			}
+		}
+	}
+}
+
+// About two area start here ***
+.about-two {
+	&-area {
+		overflow: hidden;
+	}
+	&-right {
+		padding: 0 80px;
+		@include breakpoint(max-xxl) {
+			padding: 0;
+		}
+	}
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+	&__content {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+		@include breakpoint(max-sm) {
+			flex-wrap: wrap;
+		}
+		ul {
+			li {
+				@include flex;
+				gap: 10px;
+				color: var(--black);
+				padding: 15px 0;
+				border-bottom: 1px solid var(--border);
+				&:last-child {
+					border: none;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+// About two area end here ***
+
+// About three area start here ***
+.about-three {
+	&-area {
+		overflow: hidden;
+	}
+	&__image {
+		position: relative;
+		z-index: 1;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		.icon {
+			position: absolute;
+			bottom: 60px;
+			right: 60px;
+			img {
+				max-width: 156px;
+			}
+
+			@include breakpoint(max-lg) {
+				bottom: 20px;
+				right: 20px;
+				img {
+					max-width: 80px;
+				}
+			}
+		}
+	}
+	&__content {
+		background-color: var(--sub-bg);
+		padding: 100px;
+		height: 100%;
+		z-index: 1;
+		position: relative;
+		.shape {
+			position: absolute;
+			bottom: 20px;
+			right: 15px;
+			z-index: -1;
+		}
+
+		@include breakpoint(max-xxl) {
+			padding: 60px 30px;
+		}
+
+		@include breakpoint(max-md) {
+			padding: 60px 15px;
+		}
+
+		.text {
+			padding-bottom: 30px;
+			border-bottom: 1px solid var(--border);
+			font-size: 19px;
+			line-height: 35px;
+			@include breakpoint(max-xxl) {
+				font-size: 16px;
+				line-height: 30px;
+			}
+		}
+		.btn-group {
+			margin: 30px 0;
+			@include flex;
+			gap: 30px;
+			span {
+				display: inline-block;
+				padding: 6px 20px;
+				color: var(--paragraph);
+				@include flex;
+				gap: 20px;
+				border: 1px solid var(--black);
+				border-radius: 50px;
+			}
+			@include breakpoint(max-sm) {
+				gap: 10px;
+				span {
+					gap: 10px;
+					padding: 4px 10px;
+					font-size: 14px;
+				}
+			}
+		}
+		.list {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+			max-width: 680px;
+
+			@include breakpoint(max-sm) {
+				flex-wrap: wrap;
+			}
+			ul {
+				li {
+					color: var(--black);
+					@include flex;
+					gap: 10px;
+					&:not(:last-child) {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+// About three area end here ***

@@ -1,0 +1,24 @@
+// Progress bar area start here ***
+.progress {
+	&-area {
+		.progress {
+			background-color: var(--border);
+			height: 8px;
+			border-radius: 0px;
+			&.dark-mode {
+				background-color: var(--theme-color1);
+			}
+			.progress-bar {
+				background-color: var(--theme-color1);
+			}
+		}
+	}
+	&__title {
+		@include justify;
+		span {
+			color: var(--theme-color1);
+			font-size: 16px;
+		}
+	}
+}
+// Progress bar area end here ***
